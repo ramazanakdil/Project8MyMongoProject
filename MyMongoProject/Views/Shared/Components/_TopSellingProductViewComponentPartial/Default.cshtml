@@ -1,0 +1,59 @@
+﻿@model List<MyMongoProject.Dtos.ProductDtos.ResultProductDto>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+
+            <div class="section-header d-flex flex-wrap justify-content-between my-5">
+
+                <h2 class="section-title">Çok Satan Ürünlerimiz</h2>
+
+                <div class="d-flex align-items-center">
+                  
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+
+            <div class="products-carousel swiper">
+                <div class="swiper-wrapper">
+                    @foreach(var item in Model){
+                    <div class="product-item swiper-slide">
+
+                        <a href="#" class="btn-wishlist"><svg width="24" height="24"><use xlink:href="#heart"></use></svg></a>
+                        <figure>
+                            <a href="index.html" title="Product Title">
+                                <img src="@item.ProductImage" width="212px" height="210px" class="tab-image">
+                            </a>
+                        </figure>
+                        <h3>@item.ProductName</h3>
+                         <span class="price">@item.ProductPrice ₺</span>
+                        <div class="d-flex align-items-center justify-content-between">
+                            <div class="input-group product-qty">
+                                <span class="input-group-btn">
+                                    <button type="button" class="quantity-left-minus btn btn-danger btn-number" data-type="minus">
+                                        <svg width="16" height="16"><use xlink:href="#minus"></use></svg>
+                                    </button>
+                                </span>
+                                <input type="text" id="quantity" name="quantity" class="form-control input-number" value="1">
+                                <span class="input-group-btn">
+                                    <button type="button" class="quantity-right-plus btn btn-success btn-number" data-type="plus">
+                                        <svg width="16" height="16"><use xlink:href="#plus"></use></svg>
+                                    </button>
+                                </span>
+                            </div>
+                            <a href="#" class="nav-link">Sepete Ekle <iconify-icon icon="uil:shopping-cart"></a>
+                        </div>
+                    </div>
+                    }
+      
+
+                </div>
+            </div>
+            <!-- / products-carousel -->
+
+        </div>
+    </div>
+</div>

@@ -1,0 +1,30 @@
+﻿@model List<MyMongoProject.Dtos.SellingDtos.ResultSellingDto>
+@{
+    ViewData["Title"] = "SellingList";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<link href="~/lib/bootstrap/dist/css/bootstrap.rtl.min.css" rel="stylesheet" />
+<div class="container">
+    <br />
+    <h3>Satış Listesi</h3>
+    <br /><br />
+    <table class="table table-bordered">
+        <tr>
+            <th>#</th>
+            <th>Ürün</th>
+            <th>Sil</th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+                <tr>
+                    <td>@item.SellingId</td>
+                    <td>@item.ProductId</td>
+                    <td><a href="/Selling/DeleteSelling/@item.SellingId" class="btn btn-danger">Sil</a></td>
+                </tr>
+        }
+
+    </table>
+    <a href="/Selling/CreateSelling" class="btn btn-primary">Yeni Satış Girişi</a>
+</div>

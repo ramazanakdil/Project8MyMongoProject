@@ -1,0 +1,35 @@
+﻿@model List<MyMongoProject.Dtos.CategoryDtos.ResultCategoryCto>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+
+            <div class="section-header d-flex flex-wrap justify-content-between mb-5">
+                <h2 class="section-title">Kategoriler</h2>
+
+                <div class="d-flex align-items-center">
+
+    
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+
+            <div class="category-carousel swiper">
+                <div class="swiper-wrapper">
+                    @foreach(var item in Model){
+                    <a href="index.html" class="nav-link category-item swiper-slide">
+                        <img src="@item.CategoryIcon" style="height:35px; width:35px;" alt="Category Thumbnail">
+                        <h3 class="category-title">@item.CategoryName</h3>
+                    </a>
+                   
+                    }
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

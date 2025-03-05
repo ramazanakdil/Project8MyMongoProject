@@ -1,0 +1,26 @@
+﻿@model List<MyMongoProject.Dtos.ProductDtos.ResultProductDto>
+
+<h2>Search Results</h2>
+
+@if (Model != null && Model.Count > 0)
+{
+    <div class="row">
+        @foreach (var product in Model)
+        {
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="@product.ProductImage" class="card-img-top" alt="Product Image">
+                    <div class="card-body">
+                        <h5 class="card-title">@product.ProductName</h5>
+                        <p class="card-text">@product.ProductPrice</p>
+                        <a href="/Product/Details/@product.ProductId" class="btn btn-primary">View Details</a>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+}
+else
+{
+    <p>No products found matching your search criteria.</p>
+}

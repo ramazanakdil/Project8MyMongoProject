@@ -1,0 +1,29 @@
+﻿@model MyMongoProject.Dtos.ProductDtos.GetByIdProductDto
+@{
+    Layout = null;
+}
+
+<link href="~/lib/bootstrap/dist/css/bootstrap.rtl.min.css" rel="stylesheet" />
+
+
+<div class="container">
+    <br />
+    <h3>Ürün Güncelleme Sayfası</h3>
+    <br /><br />
+    <form method="post">
+        <input type="hidden" asp-for="ProductId" />
+        <label>Ürün Adı</label>
+        <input type="text" asp-for="ProductName" class="form-control" />
+        <br />
+        <label>Fiyat</label>
+        <input type="text" asp-for="ProductPrice" class="form-control" />
+        <br />
+        <label>Ürün Görseli</label>
+        <input type="text" asp-for="ProductImage" class="form-control" />
+        <br />
+        <label>Kategori</label>
+        <select asp-for="CategoryId" class="form-control" asp-items="@(ViewBag.Categories as List<SelectListItem>)"></select>
+        <br />
+        <button class="btn btn-info">Ürün Güncelle</button>
+    </form>
+</div>

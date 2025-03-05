@@ -1,0 +1,62 @@
+﻿@model List<MyMongoProject.Dtos.ProductDtos.ResultProductDto>
+
+<head>
+    @await Component.InvokeAsync("_HeadViewComponentPartial")
+</head>
+
+<header>
+    @await Component.InvokeAsync("_HeaderViewComponentPartial")
+
+</header>
+<div class="container-fluid">
+
+    <div class="row">
+        <div class="col-md-12">
+
+            <div class="bootstrap-tabs product-tabs">
+                <div class="tabs-header d-flex justify-content-between border-bottom my-5">
+                    <h3>Ürünlerimiz</h3>
+
+                </div>
+                <div class="tab-content" id="nav-tabContent">
+                    <div class="tab-pane fade show active" id="nav-all" role="tabpanel" aria-labelledby="nav-all-tab">
+
+                        <div class="product-grid row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5">
+
+                            @foreach (var item in Model)
+                            {
+                                <div class="col">
+                                    <div class="product-item">
+                                        
+                                        <figure>
+                                            <a href="index.html" title="Product Title">
+                                                <img src="@item.ProductImage" width="229px" height="210px" class="tab-image">
+                                            </a>
+                                        </figure>
+                                        <h3>@item.ProductName</h3>
+                                        <span class="price">@item.ProductPrice ₺</span>
+                                        <div class="d-flex align-items-center justify-content-between">
+                                            <div class="input-group product-qty">
+                                               
+                                                
+                                            </div>
+                                            <a href="#" class="nav-link">Sepete Ekle <iconify-icon icon="uil:shopping-cart"></a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            }
+
+                        </div>
+                        <!-- / product-grid -->
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+@await Component.InvokeAsync("_FooterViewComponentPartial")

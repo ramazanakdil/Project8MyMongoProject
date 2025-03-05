@@ -1,0 +1,86 @@
+﻿@model List<MyMongoProject.Dtos.DiscountDtos.ResultDiscountDto>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+
+            <div class="banner-blocks">
+
+                <div class="banner-ad large bg-info block-1">
+
+                    <div class="swiper main-swiper">
+                        <div class="swiper-wrapper">
+
+                            <div class="swiper-slide">
+                                <div class="row banner-content p-5">
+                                    <div class="content-wrapper col-md-7">
+                                        <div class="categories my-3">100% Doğal</div>
+                                        <h3 class="display-4">Taze Smoothie & Yaz İçecekleri</h3>
+                                        <p>
+                                            Serinleten lezzetler ile doğadan gelen ferahlık. Gününüze enerji katın.
+
+                                        </p>
+                                        <a href="#" class="btn btn-outline-dark btn-lg text-uppercase fs-6 rounded-1 px-4 py-3 mt-3">Satın Al</a>
+                                    </div>
+                                    <div class="img-wrapper col-md-5">
+                                        <img src="~/FoodMart/images/product-thumb-1.png" class="img-fluid">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <div class="row banner-content p-5">
+                                    <div class="content-wrapper col-md-7">
+                                        <div class="categories mb-3 pb-3">100% Doğal</div>
+                                        <h3 class="banner-title">Doğal Meyve Suları & Smoothie</h3>
+                                        <p>
+                                            Taptaze meyvelerle hazırlanan içeceklerimizle yazın tadını çıkarın.
+                                        </p>
+                                        <a href="#" class="btn btn-outline-dark btn-lg text-uppercase fs-6 rounded-1">Satın Al</a>
+                                    </div>
+                                    <div class="img-wrapper col-md-5">
+                                        <img src="~/FoodMart/images/product-thumb-1.png" class="img-fluid">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <div class="row banner-content p-5">
+                                    <div class="content-wrapper col-md-7">
+                                        <div class="categories mb-3 pb-3">100% Doğal</div>
+                                        <h3 class="banner-title">Doğal Domates Ketçabı</h3>
+                                        <p>
+                                            Taze domateslerden üretilen, lezzetiyle sofralarınıza eşlik eden enfes tat.
+                                        </p>
+                                        <a href="#" class="btn btn-outline-dark btn-lg text-uppercase fs-6 rounded-1">Satın Al</a>
+                                    </div>
+                                    <div class="img-wrapper col-md-5">
+                                        <img src="~/FoodMart/images/product-thumb-2.png" class="img-fluid">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-pagination"></div>
+
+                    </div>
+                </div>
+                @foreach(var item in Model){
+                <div class="@item.Button" style="background:url('/@item.ImageUrl') no-repeat;background-position: right bottom">
+                    <div class="row banner-content p-5">
+
+                        <div class="content-wrapper col-md-7">
+                            <div class="categories mb-3 pb-3">@item.DiscountRate</div>
+                            <h3 class="banner-title">@item.DiscountTitle</h3>
+                            <a href="#" class="d-flex align-items-center nav-link">Hemen İncele <svg width="24" height="24"><use xlink:href="#arrow-right"></use></svg></a>
+                        </div>
+
+                    </div>
+                </div>
+                }
+            </div>
+            <!-- / Banner Blocks -->
+
+        </div>
+    </div>
+</div>

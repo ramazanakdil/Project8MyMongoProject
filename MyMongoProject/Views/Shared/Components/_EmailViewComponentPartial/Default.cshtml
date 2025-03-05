@@ -1,0 +1,56 @@
+﻿<div class="container-fluid">
+
+    <div class="bg-secondary py-5 my-5 rounded-5" style="background: url('images/bg-leaves-img-pattern.png') no-repeat;">
+        <div class="container my-5">
+            <div class="row">
+                <div class="col-md-6 p-5">
+                    <div class="section-header">
+                        <h2 class="section-title display-4"><span class="text-primary">%25 İndirimden</span> Sizde yararlanmak için hemen abone olun</h2>
+                    </div>
+                        </div>
+                <div class="col-md-6 p-5">
+                    <form asp-controller="Home" asp-action="SendEmail" method="post">
+
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Ad - Soyad</label>
+                            <input type="text" class="form-control form-control-lg" name="Name" id="name" placeholder="Ad - Soyad" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control form-control-lg" name="Email" id="email" placeholder="abc@mail.com" required>
+
+                        </div>
+                        <div class="form-check form-check-inline mb-3">
+                            <label class="form-check-label" for="subscribe">
+                                <input class="form-check-input" type="checkbox" name="Subscribe" id="subscribe" value="true">
+                                Abone ol
+                            </label>
+                        </div>
+                        <div class="d-grid gap-2">
+                            <button type="submit" class="btn btn-dark btn-lg">Gönder</button>
+                        </div>
+
+                    </form>
+
+                    @if (TempData["SuccessMessage"] != null)
+                    {
+                        <div class="alert alert-success">
+                            @TempData["SuccessMessage"]
+                        </div>
+                    }
+
+                    @if (TempData["ErrorMessage"] != null)
+                    {
+                        <div class="alert alert-danger">
+                            @TempData["ErrorMessage"]
+                        </div>
+                    }
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+</div>

@@ -1,0 +1,19 @@
+﻿@model MyMongoProject.Dtos.SellingDtos.CreateSellingDto
+@{
+    Layout = null;
+}
+
+<link href="~/lib/bootstrap/dist/css/bootstrap.rtl.min.css" rel="stylesheet" />
+
+
+<div class="container">
+    <h3>Yeni Satış Ekleme Sayfası</h3>
+    <br /><br />
+    <form method="post">
+        <label>Ürün</label>
+        <select asp-for="ProductId" class="form-control" asp-items="@(ViewBag.Products as List<SelectListItem>)"></select>
+        <br />
+
+        <button class="btn btn-info">Satış Ekle</button>
+    </form>
+</div>

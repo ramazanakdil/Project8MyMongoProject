@@ -1,0 +1,29 @@
+﻿@model List<MyMongoProject.Dtos.CustomerDtos.ResultCustomerWithCategoryDto>
+@{
+    Layout = null;
+}
+
+<link href="~/lib/bootstrap/dist/css/bootstrap.rtl.min.css" rel="stylesheet" />
+<div class="container">
+    <br /><br />
+    <table class="table table-bordered">
+        <tr>
+            <th>#</th>
+            <th>Müşteri Adı</th>
+            <th>Müşteri Departman</th>
+            <th>Sil</th>
+            <th>Güncelle</th>
+        </tr>
+        <tr>
+            @foreach (var item in Model)
+            {
+                <td>@item.CustomerId</td>
+                <td>@item.CustomerName @item.CustomerSurname</td>
+                <td>@item.DepartmentName</td>
+                <td><a href="/Customer/CustomerDelete/@item.CustomerId" class="btn btn-danger">Sil</a></td>
+                <td><a href="/Customer/UpdateCustomer/@item.CustomerId" class="btn btn-success">Güncelle</a></td>
+            }
+        </tr>
+    </table>
+    <a href="/Customer/CreateCustomer" class="btn btn-primary">Yeni Müşteri Girişi</a>
+</div>

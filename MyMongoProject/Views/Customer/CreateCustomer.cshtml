@@ -1,0 +1,23 @@
+﻿@model MyMongoProject.Dtos.CustomerDtos.CreateCustomerDto
+@{
+    Layout = null;
+}
+
+<link href="~/lib/bootstrap/dist/css/bootstrap.rtl.min.css" rel="stylesheet" />
+
+
+<div class="container">
+    <br /><br />
+    <form method="post">
+        <label>Müşteri Adı</label>
+        <input type="text" asp-for="CustomerName" class="form-control" />
+        <br />
+        <label>Müşteri Soyadı</label>
+        <input type="text" asp-for="CustomerSurname" class="form-control" />
+        <br /> 
+        <label>Müşteri Departmanı</label>
+        <input type="text" asp-for="DepartmentId" class="form-control" />
+        <br />
+        <button class="btn btn-info">Müşteriyi Ekle</button>
+    </form>
+</div>

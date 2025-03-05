@@ -1,0 +1,28 @@
+﻿@model MyMongoProject.Dtos.DiscountDtos.CreateDiscountDto
+@{
+    Layout = null;
+}
+
+<link href="~/lib/bootstrap/dist/css/bootstrap.rtl.min.css" rel="stylesheet" />
+
+
+<div class="container">
+    <h3>Yeni İndirim Ekleme Sayfasıa</h3>
+    <br /><br />
+    <form method="post">
+        <label>İndirim Başlığı</label>
+        <input type="text" asp-for="DiscountTitle" class="form-control" />
+        <br />
+        <label>İndirim Yüzde Yazısı</label>
+        <input type="text" asp-for="DiscountRate" class="form-control" />
+        <br />
+        <label>Backgorund Görsel</label>
+        <input type="text" asp-for="ImageUrl" class="form-control" />
+        <br />
+        <label>Class</label>
+        <input type="text" asp-for="Button" class="form-control" />
+        <br />
+
+        <button class="btn btn-info">İndirim Ekle</button>
+    </form>
+</div>

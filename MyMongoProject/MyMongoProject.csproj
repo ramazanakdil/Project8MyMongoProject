@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\Mantis\.DS_Store" />
+    <None Include="wwwroot\Mantis\.github\workflows\main.yml" />
+    <None Include="wwwroot\Mantis\.github\workflows\prod.yml" />
+    <None Include="wwwroot\Mantis\dist\.DS_Store" />
+    <None Include="wwwroot\Mantis\src\.DS_Store" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="13.0.1" />
+    <PackageReference Include="MailKit" Version="4.10.0" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="6.0.18" />
+    <PackageReference Include="MongoDB.Bson" Version="3.1.0" />
+    <PackageReference Include="MongoDB.Driver" Version="3.1.0" />
+    <PackageReference Include="MongoDB.Driver.Core" Version="2.30.0" />
+  </ItemGroup>
+
+</Project>

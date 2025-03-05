@@ -1,0 +1,85 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Sample Page | Mantis Bootstrap 5 Admin Template</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Mantis is made using Bootstrap 5 design framework. Download the free admin template & use it for your project.">
+    <meta name="keywords" content="Mantis, Dashboard UI Kit, Bootstrap 5, Admin Template, Admin Dashboard, CRM, CMS, Bootstrap Admin Template">
+    <meta name="author" content="CodedThemes">
+    <link rel="icon" href="~/Mantis/dist/assets/images/favicon.svg" type="image/x-icon"> <!-- [Google Font] Family -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700&display=swap" id="main-font-link">
+    <!-- [Tabler Icons] https://tablericons.com -->
+    <link rel="stylesheet" href="~/Mantis/dist/assets/fonts/tabler-icons.min.css">
+    <!-- [Feather Icons] https://feathericons.com -->
+    <link rel="stylesheet" href="~/Mantis/dist/assets/fonts/feather.css">
+    <!-- [Font Awesome Icons] https://fontawesome.com/icons -->
+    <link rel="stylesheet" href="~/Mantis/dist/assets/fonts/fontawesome.css">
+    <!-- [Material Icons] https://fonts.google.com/icons -->
+    <link rel="stylesheet" href="~/Mantis/dist/assets/fonts/material.css">
+    <link rel="stylesheet" href="~/Mantis/dist/assets/css/style.css" id="main-style-link">
+    <link rel="stylesheet" href="~/Mantis/dist/assets/css/style-preset.css">
+
+</head>
+<body data-pc-preset="preset-1" data-pc-direction="ltr" data-pc-theme="light">
+    <div class="loader-bg">
+        <div class="loader-track">
+            <div class="loader-fill"></div>
+        </div>
+    </div>
+    <nav class="pc-sidebar">
+        <div class="navbar-wrapper">
+            <div class="m-header">
+
+            </div>
+            <div class="navbar-content">
+                <ul class="pc-navbar">
+
+                    <li class="pc-item">
+                        <a href="/Category/CategoryList" class="pc-link">
+                            <span class="pc-micon"><i class="ti ti-border-outer"></i></span>
+                            <span class="pc-mtext">Kategoriler</span>
+                        </a>
+                    </li>
+                    <li class="pc-item">
+                        <a href="/Products/ProductList" class="pc-link">
+                            <span class="pc-micon"><i class="ti ti-shopping-cart-plus"></i></span>
+                            <span class="pc-mtext">Ürünler</span>
+                        </a>
+                    </li>
+                    <li class="pc-item">
+                        <a href="/Discount/DiscountList" class="pc-link">
+                            <span class="pc-micon"><i class="ti ti-discount-2"></i></span>
+                            <span class="pc-mtext">İndirimler</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="pc-container">
+        <div class="pc-content">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="card">
+                        @RenderBody()
+                        <br /><br />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="~/Mantis/dist/assets/js/plugins/popper.min.js"></script>
+    <script src="~/Mantis/dist/assets/js/plugins/simplebar.min.js"></script>
+    <script src="~/Mantis/dist/assets/js/plugins/bootstrap.min.js"></script>
+    <script src="~/Mantis/dist/assets/js/fonts/custom-font.js"></script>
+    <script src="~/Mantis/dist/assets/js/pcoded.js"></script>
+    <script src="~/Mantis/dist/assets/js/plugins/feather.min.js"></script>
+    <script>layout_change('light');</script>
+    <script>change_box_container('false');</script>
+    <script>layout_rtl_change('false');</script>
+    <script>preset_change("preset-1");</script>
+    <script>font_change("Public-Sans");</script>
+</body>
+</html>

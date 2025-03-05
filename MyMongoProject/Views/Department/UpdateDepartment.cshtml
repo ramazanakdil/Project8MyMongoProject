@@ -1,0 +1,19 @@
+﻿@model MyMongoProject.Dtos.DepartmentDtos.GetByIdDepartmentDto
+
+@{
+    Layout = null;
+}
+
+<link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+<div class="container">
+    <br /><br />
+    <div class="alert alert-primary">Departman Güncelleme Formu</div>
+    <form method="post">
+        <input type="hidden" asp-for="DepartmentId" />
+        <label>Departman Adı</label>
+        <input type="text" asp-for="DepartmentName" class="form-control" />
+        <br />
+        <button class="btn btn-primary">Departmanı Güncelle</button>
+    </form>
+</div>

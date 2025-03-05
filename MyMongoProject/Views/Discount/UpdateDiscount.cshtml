@@ -1,0 +1,26 @@
+﻿@model MyMongoProject.Dtos.DiscountDtos.GetByIdDiscountDto
+@{
+    Layout = null;
+}
+
+<link href="~/lib/bootstrap/dist/css/bootstrap.rtl.min.css" rel="stylesheet" />
+
+
+<div class="container">
+    <br />
+    <h3>İndirim Düzenleme Sayfası</h3>
+    <br /><br />
+    <form method="post">
+        <input type="hidden" asp-for="DiscountId" />
+        <label>İndirim Başlığı</label>
+        <input type="text" asp-for="DiscountTitle" class="form-control" />
+        <br />
+        <label>İndirim Yüzdesi Yazısı</label>
+        <input type="text" asp-for="DiscountRate" class="form-control" />
+        <br />
+        <label>İndirim Arkaplan Görseli</label>
+        <input type="text" asp-for="ImageUrl" class="form-control" />
+        <br />
+        <button class="btn btn-info">İndirim Güncelle</button>
+    </form>
+</div>

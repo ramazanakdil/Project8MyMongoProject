@@ -1,0 +1,33 @@
+﻿@model List<MyMongoProject.Dtos.DiscountDtos.ResultDiscountDto>
+@{
+    ViewData["Title"] = "DiscountList";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<link href="~/lib/bootstrap/dist/css/bootstrap.rtl.min.css" rel="stylesheet" />
+<div class="container">
+    <br />
+    <h3>İndirim Düzenleme Ekranı</h3>
+    <br /><br />
+    <table class="table table-bordered">
+        <tr>
+            <th>#</th>
+            <th>İndirim Oran Yazısı</th>
+            <th>İndirim Başlığı</th>
+            <th>Background Resmi</th>
+            <th>Güncelle</th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.DiscountId</td>
+                <td>@item.DiscountRate</td>
+                <td>@item.DiscountTitle</td>
+                <td>@item.ImageUrl</td>
+                <td><a href="/Discount/UpdateDiscount/@item.DiscountId" class="btn btn-info">Güncelle</a></td>
+            </tr>
+        }
+
+    </table>
+</div>

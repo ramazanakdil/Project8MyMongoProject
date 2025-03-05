@@ -1,0 +1,18 @@
+﻿@model MyMongoProject.Dtos.DepartmentDtos.CreateDepartmentDto
+
+@{
+    Layout = null;
+}
+
+<link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+<div class="container">
+    <br /><br />
+    <div class="alert alert-primary">Yeni Departman Ekleme Formu</div>
+    <form method="post">
+        <label>Departman Adı</label>
+        <input type="text" asp-for="DepartmentName" class="form-control" />
+        <br />
+        <button class="btn btn-primary">Departmanı Ekle</button>
+    </form>
+</div>

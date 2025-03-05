@@ -1,0 +1,35 @@
+﻿@model List<MyMongoProject.Dtos.CategoryDtos.ResultCategoryCto>
+@{
+    ViewData["Title"] = "CategoryList";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<link href="~/lib/bootstrap/dist/css/bootstrap.rtl.min.css" rel="stylesheet" />
+<div class="container">
+    <br />
+    <h3>Kategori Listesi</h3>
+    <br /><br />
+    <table class="table table-bordered">
+        <tr>
+            <th>#</th>
+            <th>Kategori Adı</th>
+            <th>Kategori İkonu</th>
+            <th>Sil</th>
+            <th>Güncelle</th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.CategoryId</td>
+                <td>@item.CategoryName</td>
+                <td>@item.CategoryIcon</td>
+                <td><a href="/Category/DeleteCategory/@item.CategoryId" class="btn btn-danger">Sil</a></td>
+            
+            <td><a href="/Category/UpdateCategory/@item.CategoryId" class="btn btn-success">Güncelle</a></td>
+            </tr>
+        }
+
+    </table>
+    <a href="/Category/CreateCategory" class="btn btn-primary">Yeni Kategori Girişi</a>
+</div>
