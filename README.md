@@ -8,7 +8,6 @@ M&Y Yazılım Kariyer Eğitim Akademi Danışmanlık bünyesinde, Murat Yüceda�
   - **Ürün Yönetimi**: Ürün ekleme, çıkarma ve güncelleme işlemleri yapılabilir.
   - **İndirim Şablonları**: Admin, indirim şablonlarını özelleştirebilir.
   - **Satış Listesi**: Satış geçmişine bakılabilir ve yeni satışlar eklenebilir.
-- **Kullanıcı Yönetimi**: Kullanıcılar giriş yapabilir ve hesapları üzerinden işlemlerini takip edebilir.
 
 ## Kullanılan Teknolojiler
 
